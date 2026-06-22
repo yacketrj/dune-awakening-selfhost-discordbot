@@ -1,0 +1,22 @@
+{
+  "name": "dune-awakening-selfhost-discordbot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Read-only Discord bot for Dune Awakening Self-Host Docker.",
+  "type": "module",
+  "engines": {
+    "node": ">=20.18.0"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "register": "node scripts/register-commands.js",
+    "test": "node --test",
+    "check": "npm test"
+  },
+  "dependencies": {
+    "discord.js": "^14.26.4"
+  },
+  "overrides": {
+    "undici": "6.27.0"
+  }
+}
