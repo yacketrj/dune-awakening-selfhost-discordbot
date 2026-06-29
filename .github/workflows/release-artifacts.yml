@@ -44,14 +44,14 @@ jobs:
           cd dist
           sha256sum -c "discord-readonly-bot-v${{ steps.release.outputs.version }}.tar.gz.sha256"
           sha256sum -c "dune-awakening-selfhost-discordbot.cdx.json.sha256"
-      - uses: actions/upload-artifact@v5.0.0
+      - uses: actions/upload-artifact@v7.0.1
         with:
           name: discord-readonly-bot-addon
           path: |
             dist/*.tar.gz
             dist/*.sha256
           if-no-files-found: error
-      - uses: actions/upload-artifact@v5.0.0
+      - uses: actions/upload-artifact@v7.0.1
         with:
           name: discord-readonly-bot-sbom
           path: |
